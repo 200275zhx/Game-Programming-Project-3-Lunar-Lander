@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Game Object">
+      <UniqueIdentifier>{791d6069-ceb4-4270-af82-6767fe29adaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{118a94c6-bc25-4b7d-b0e7-e639bda65256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Object">
+      <UniqueIdentifier>{bea2df89-cd0f-4544-b63f-c219ef7cc56e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GL Functions">
+      <UniqueIdentifier>{b96784e4-c8f5-4d50-9ce6-8f2953f41cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GL Functions">
+      <UniqueIdentifier>{e6977499-8f63-4d3d-aa8f-11847c049890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{238daa0d-c3ae-4711-9e6d-a4b5e91c6e17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexCollision.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexCollisionBody.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="glm_vec3_utility.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureRender.cpp">
+      <Filter>Source Files\GL Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>Source Files\GL Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="stbi_loader.cpp">
+      <Filter>Source Files\GL Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceShip.cpp">
+      <Filter>Source Files\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="LandingPlatform.cpp">
+      <Filter>Source Files\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Source Files\Game Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ComplexCollision.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ComplexCollisionBody.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="glm_vec3_utility.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureRender.h">
+      <Filter>Header Files\GL Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>Header Files\GL Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files\GL Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceShip.h">
+      <Filter>Header Files\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="LandingPlatform.h">
+      <Filter>Header Files\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Header Files\Game Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
