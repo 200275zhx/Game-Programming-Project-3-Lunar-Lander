@@ -92,7 +92,7 @@ void SpaceShip::update(float delta_time) {
 
 void SpaceShip::render(ShaderProgram* shader_program) const {
 	// --------------- CAMERA FOLLOW --------------- //
-	glm::mat4 camera_translation_matrix = glm::translate(glm::mat4(1.0f), position);
+	glm::mat4 camera_translation_matrix = glm::translate(glm::mat4(1.0f), -position);
 	shader_program->set_view_matrix(camera_translation_matrix);
 
 	// --------------- UPDATE MODEL MATRIX --------------- //
