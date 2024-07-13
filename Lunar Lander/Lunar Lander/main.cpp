@@ -1,3 +1,13 @@
+/**
+* Author: [Hexun Zhang]
+* Assignment: Lunar Lander
+* Date due: 2024-07-13, 11:59pm
+* I pledge that I have completed this assignment without
+* collaborating with anyone else, in conformance with the
+* NYU School of Engineering Policies and Procedures on
+* Academic Misconduct.
+**/
+
 #define GL_SILENCE_DEPRECATION
 
 #ifdef _WINDOWS
@@ -205,33 +215,16 @@ void initialise()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     // Start Audio
-    if (Mix_OpenAudio(CD_QUAL_FREQ, MIX_DEFAULT_FORMAT, AUDIO_CHAN_AMT, AUDIO_BUFF_SIZE) == -1) {
-        std::cerr << "SDL_mixer could not initialize! SDL_mixer Error: " << Mix_GetError() << std::endl;
-        return;
-    }
+    Mix_OpenAudio(CD_QUAL_FREQ, MIX_DEFAULT_FORMAT, AUDIO_CHAN_AMT, AUDIO_BUFF_SIZE);
 
     g_music = Mix_LoadMUS(BGM_FILEPATH);
-    if (!g_music) {
-        std::cerr << "Failed to load background music! SDL_mixer Error: " << Mix_GetError() << std::endl;
-        return;
-    }
-
     Mix_PlayMusic(g_music, LOOP_FOREVER);
 
     g_boost_sfx = Mix_LoadWAV(BOOSTER_SOUND_FILEPATH);
-    if (!g_boost_sfx) {
-        std::cerr << "Failed to load booster sound effect! SDL_mixer Error: " << Mix_GetError() << std::endl;
-        return;
-    }
-
     g_broken_sfx = Mix_LoadWAV(BROKEN_SOUND_FILEPATH);
-    if (!g_broken_sfx) {
-        std::cerr << "Failed to load broken sound effect! SDL_mixer Error: " << Mix_GetError() << std::endl;
-        return;
-    }
 
-    Mix_VolumeChunk(g_boost_sfx, MIX_MAX_VOLUME / 2);  // Set the volume to a quarter of the maximum
-    Mix_VolumeChunk(g_broken_sfx, MIX_MAX_VOLUME / 2); // Set the volume to a quarter of the maximum
+    Mix_VolumeChunk(g_boost_sfx, MIX_MAX_VOLUME / 2);
+    Mix_VolumeChunk(g_broken_sfx, MIX_MAX_VOLUME / 2);
 }
 
 void process_input()
@@ -272,31 +265,13 @@ void process_input()
     if (g_spaceship->alive) {
         if (key_state[SDL_SCANCODE_A])
         {
-            //g_spaceship->debug_move_left();
             g_spaceship->left_fuel();
         }
         if (key_state[SDL_SCANCODE_D])
         {
-            //g_spaceship->debug_move_right();
             g_spaceship->right_fuel();
         }
     }
-    /*if (key_state[SDL_SCANCODE_W])
-    {
-        g_spaceship->debug_move_up();
-    }
-    if (key_state[SDL_SCANCODE_S])
-    {
-        g_spaceship->debug_move_down();
-    }
-    if (key_state[SDL_SCANCODE_Q])
-    {
-        g_spaceship->debug_rotate_left();
-    }
-    if (key_state[SDL_SCANCODE_E])
-    {
-        g_spaceship->debug_rotate_right();
-    }*/
 }
 
 void update()
