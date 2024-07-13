@@ -59,23 +59,23 @@ void SpaceShip::update(float delta_time) {
 	}
 
 	// --------------- APPLY FORCE --------------- //
-	//float linear_drag = DRAG_COEFFICIENT * linear_vel * linear_vel / -2; // Linear Drag Force = (1/2) * (Fluid Density * Drag Coefficient * Area) * Linear Velocity ^ 2
-	//float gravitational_drag = DRAG_COEFFICIENT * gravitational_vel * gravitational_vel / -2;
-	//float angular_drag = DRAG_COEFFICIENT * ANGULAR_DRAG * angular_vel * angular_vel * radius * radius * radius / -2; // Angular Drag Force = (1/2) * (Fluid Density * Drag Coefficient * Area) * Angular Velocity ^ 2 * Radius ^ 3
+	float linear_drag = DRAG_COEFFICIENT * linear_vel * linear_vel / -2; // Linear Drag Force = (1/2) * (Fluid Density * Drag Coefficient * Area) * Linear Velocity ^ 2
+	float gravitational_drag = DRAG_COEFFICIENT * gravitational_vel * gravitational_vel / -2;
+	float angular_drag = DRAG_COEFFICIENT * ANGULAR_DRAG * angular_vel * angular_vel * radius * radius * radius / -2; // Angular Drag Force = (1/2) * (Fluid Density * Drag Coefficient * Area) * Angular Velocity ^ 2 * Radius ^ 3
 
-	//float net_torque = radius * (right_force - left_force); // Net Torque = Radius * (Net Force Applied)
-	//if (angular_vel <= 0) { net_torque -= angular_drag; } // Apply Drag Force Based on Current Rotation Direction
-	//else { net_torque += angular_drag; }
-	//float angular_acc = net_torque / inertia; // Angular Acceleration = Net Torque / Inertia
-	//angular_vel += angular_acc * delta_time; // Angular Velocity = Angular Velocity + Angular Acceleration * Delta Time
-	//rotation.z += angular_vel * delta_time;
+	float net_torque = radius * (right_force - left_force); // Net Torque = Radius * (Net Force Applied)
+	if (angular_vel <= 0) { net_torque -= angular_drag; } // Apply Drag Force Based on Current Rotation Direction
+	else { net_torque += angular_drag; }
+	float angular_acc = net_torque / inertia; // Angular Acceleration = Net Torque / Inertia
+	angular_vel += angular_acc * delta_time; // Angular Velocity = Angular Velocity + Angular Acceleration * Delta Time
+	rotation.z += angular_vel * delta_time;
 
-	//float net_force = left_force + right_force + linear_drag; // Net Force = Total Force Applied - Drag Force
-	//float linear_acc = net_force / mass; // Linear Acceleration = Net Force / Mass
-	//linear_vel += linear_acc * delta_time; // Linear Velocity = Linear Velocity + Linear Acceleration * Delta Time
-	//gravitational_vel += (GRAVITY + gravitational_drag) * delta_time; // Falling Velocity = Gravity * Time
-	//glm::vec3 forward = glm::vec3(-sin(rotation.z), cos(rotation.z), 0.0f); // Get Normalized Moving Direction Through Rotation
-	//position += linear_vel * forward * delta_time + gravitational_vel * glm::vec3(0.0f, -1.0f, 0.0f) * delta_time;
+	float net_force = left_force + right_force + linear_drag; // Net Force = Total Force Applied - Drag Force
+	float linear_acc = net_force / mass; // Linear Acceleration = Net Force / Mass
+	linear_vel += linear_acc * delta_time; // Linear Velocity = Linear Velocity + Linear Acceleration * Delta Time
+	gravitational_vel += (GRAVITY + gravitational_drag) * delta_time; // Falling Velocity = Gravity * Time
+	glm::vec3 forward = glm::vec3(-sin(rotation.z), cos(rotation.z), 0.0f); // Get Normalized Moving Direction Through Rotation
+	position += linear_vel * forward * delta_time + gravitational_vel * glm::vec3(0.0f, -1.0f, 0.0f) * delta_time;
 
 	//std::cout << "Forward Direction: (" << forward.x << ", " << forward.y << ", " << forward.z << ")\n";
 
@@ -86,8 +86,7 @@ void SpaceShip::update(float delta_time) {
 	model_matrix = glm::scale(model_matrix, INIT_SCALE);
 
 	// --------------- UPDATE FUEL --------------- //
-	fuel -= delta_time;
-	if (fuel <= 0.0f) { alive = false; }
+	fuel -= delta_time * (left_force + right_force) * 3;
 }
 
 void SpaceShip::render(ShaderProgram* shader_program) const {

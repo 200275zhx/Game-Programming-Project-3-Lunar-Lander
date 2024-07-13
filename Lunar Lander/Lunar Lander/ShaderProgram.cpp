@@ -96,6 +96,7 @@ void ShaderProgram::set_colour(float red, float green, float blue, float alpha)
 
 void ShaderProgram::set_view_matrix(const glm::mat4 &matrix)
 {
+    view_matrix = matrix;
     glUseProgram(m_program_id);
     glUniformMatrix4fv(m_view_matrix_uniform, 1, GL_FALSE, &matrix[0][0]);
 }

@@ -30,6 +30,7 @@ public:
 	void right_fuel();
 	void left_idle();
 	void right_idle();
+	float get_fuel() { return fuel; }
 
 	void debug_move_left() { position += glm::vec3(-0.03f, 0.0f, 0.0f); }
 	void debug_move_right() { position += glm::vec3(0.03f, 0.0f, 0.0f); }
@@ -59,14 +60,6 @@ private:
 	float radius; // r = width / 2
 	float left_power; // left_power = scale
 	float right_power; // right_power = scale
-
-	//float mass = 1.0f; // mass = scale
-	//float width = 1.0f; // width = scale
-	//float height = 0.5f; // height = width / 2
-	//float inertia = 0.166f; // I = (1/12) * mass * (width^2 + height^2)
-	//float radius = 0.5f; // r = width / 2
-	//float left_power = 1.0f; // left_power = scale
-	//float right_power = 1.0f; // right_power = scale
 
 	float left_force;
 	float right_force;

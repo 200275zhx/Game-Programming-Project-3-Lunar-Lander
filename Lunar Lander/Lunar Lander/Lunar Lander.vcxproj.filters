@@ -31,6 +31,18 @@
     <Filter Include="Source Files\Physics">
       <UniqueIdentifier>{238daa0d-c3ae-4711-9e6d-a4b5e91c6e17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Game UI">
+      <UniqueIdentifier>{d8082d39-7be4-41e3-9b51-cc696d7cbe6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game UI">
+      <UniqueIdentifier>{58fb8471-1607-43ba-8f6d-2234a402248b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sounds">
+      <UniqueIdentifier>{776b7026-072e-481b-91dd-3ac35b660542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sounds">
+      <UniqueIdentifier>{3ca9d142-ba31-41dd-86e9-65aada8eda97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +78,9 @@
     <ClCompile Include="Block.cpp">
       <Filter>Source Files\Game Object</Filter>
     </ClCompile>
+    <ClCompile Include="GameUI.cpp">
+      <Filter>Source Files\Game UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComplexCollision.h">
@@ -98,5 +113,16 @@
     <ClInclude Include="Block.h">
       <Filter>Header Files\Game Object</Filter>
     </ClInclude>
+    <ClInclude Include="GameUI.h">
+      <Filter>Header Files\Game UI</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSoundNotifier.h">
+      <Filter>Header Files\Sounds</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Blocks.json">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

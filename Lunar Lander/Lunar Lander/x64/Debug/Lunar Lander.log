@@ -1,0 +1,39 @@
+﻿  Block.cpp
+  LandingPlatform.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'Block.cpp')
+  
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'LandingPlatform.cpp')
+  
+  SpaceShip.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'SpaceShip.cpp')
+  
+  ComplexCollision.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'ComplexCollision.cpp')
+  
+  ComplexCollisionBody.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'ComplexCollisionBody.cpp')
+  
+  GameObject.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'GameObject.cpp')
+  
+  main.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\GameObject.h(5,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  (compiling source file 'main.cpp')
+  
+  ShaderProgram.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\ShaderProgram.h(7,10): error C1083: Cannot open include file: 'SDL_opengl.h': No such file or directory
+  (compiling source file 'ShaderProgram.cpp')
+  
+  stbi_loader.cpp
+  TextureRender.cpp
+C:\Users\20027\OneDrive\Desktop\Intro to Game Programming\Assignments\Lunar Lander\Lunar Lander\TextureRender.h(7,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'TextureRender.cpp')
+  
+  glm_vec3_utility.cpp
+  Generating Code...

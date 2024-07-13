@@ -56,7 +56,7 @@ std::pair<float, glm::vec3> getSeparation(ComplexCollisionBody& bodyA, ComplexCo
     return { maxSeparation, separationAxis };
 }
 
-void resolveCollision(GameObject& objectA, GameObject& objectB) {
+bool resolveCollision(GameObject& objectA, GameObject& objectB) {
     ComplexCollisionBody* bodyA = objectA.getCollisionBody();
     ComplexCollisionBody* bodyB = objectB.getCollisionBody();
 
@@ -81,5 +81,7 @@ void resolveCollision(GameObject& objectA, GameObject& objectB) {
                 objectB.move(-mtv / glm::vec3(2));
             }
         } else if (bodyB->isDynamic) { objectB.move(-mtv); }
+        return true;
     }
+    else { return false; }
 }

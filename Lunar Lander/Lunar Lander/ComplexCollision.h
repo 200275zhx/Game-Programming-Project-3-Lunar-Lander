@@ -6,7 +6,7 @@
 #include "ComplexCollisionBody.h"
 #include "GameObject.h"
 
-void resolveCollision(GameObject& objectA, GameObject& objectB);
+bool resolveCollision(GameObject& objectA, GameObject& objectB);
 std::pair<float, glm::vec3> getSeparation(ComplexCollisionBody& bodyA, ComplexCollisionBody& bodyB);
 
 

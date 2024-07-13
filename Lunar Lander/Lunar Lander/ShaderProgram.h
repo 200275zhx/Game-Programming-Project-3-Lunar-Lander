@@ -31,6 +31,8 @@ private:
 
     GLuint m_vertex_shader;
     GLuint m_fragment_shader;
+
+    glm::mat4 view_matrix;
     
 public:
 
@@ -44,6 +46,7 @@ public:
     GLuint const get_program_id()               const { return m_program_id;          };
     GLuint const get_position_attribute()       const { return m_position_attribute;  };
     GLuint const get_tex_coordinate_attribute() const { return m_tex_coord_attribute; };
+    glm::mat4 const get_view_matrix()              const { return view_matrix; };
     
     void set_program_id(GLuint program_id)                         { m_program_id = program_id;                   };
 };

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="GameUI.cpp" />
     <ClCompile Include="LandingPlatform.cpp" />
     <ClCompile Include="SpaceShip.cpp" />
     <ClCompile Include="ComplexCollision.cpp" />
@@ -146,7 +147,9 @@
     <ClCompile Include="glm_vec3_utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationSoundNotifier.h" />
     <ClInclude Include="Block.h" />
+    <ClInclude Include="GameUI.h" />
     <ClInclude Include="LandingPlatform.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="ComplexCollision.h" />
@@ -156,6 +159,9 @@
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="TextureRender.h" />
     <ClInclude Include="glm_vec3_utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Blocks.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
